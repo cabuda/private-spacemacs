@@ -10,7 +10,8 @@
 ;;; License: GPLv3
 
 (defconst ca-better-defaults-packages
-  '(chinese-fonts-setup)
+  '(chinese-fonts-setup
+    google-translate)
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
 (defun ca-better-defaults/init-chinese-fonts-setup ()
@@ -22,3 +23,7 @@
             (setq cfs--profiles-steps '(("profile1" . 5)))
             (setq cfs--profiles-steps '(("profile1" . 2))))
     ))
+
+(defun ca-better-defaults/post-init-google-translate ()
+  (progn
+    (setq google-translate-default-target-language "zh-CN")))
