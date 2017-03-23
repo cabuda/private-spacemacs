@@ -11,7 +11,8 @@
 
 (defconst ca-better-defaults-packages
   '(chinese-fonts-setup
-    google-translate)
+    google-translate
+    engine-mode)
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
 (defun ca-better-defaults/init-chinese-fonts-setup ()
@@ -27,3 +28,21 @@
 (defun ca-better-defaults/post-init-google-translate ()
   (progn
     (setq google-translate-default-target-language "zh-CN")))
+
+(defun ca-better-defaults/pre-init-engine-mode ()
+  (progn
+    (setq custom-search-engine-alist '((baidu
+                                        :name "baidu"
+                                        :url "https://www.baidu.com/s?wd=%s")))
+    (dolist (engine custom-search-engine-alist)
+      (let ((func (intern (format "engine/search-%S" (car engine)))))
+        (autoload func "engine-mode" nil 'interactive)))
+    ))
+(defun ca-better-defaults/post-init-engine-mode ()
+  (progn
+    (dolist (engine custom-search-engine-alist)
+      (let* ((cur-engine (car engine))
+             (engine-url (plist-get (cdr engine) :url)))
+        (eval `(defengine ,cur-engine ,engine-url))))
+    (setq search-engine-alist (append search-engine-alist custom-search-engine-alist))
+    ))
