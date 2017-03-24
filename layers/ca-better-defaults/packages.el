@@ -33,7 +33,10 @@
   (progn
     (setq custom-search-engine-alist '((baidu
                                         :name "baidu"
-                                        :url "https://www.baidu.com/s?wd=%s")))
+                                        :url "https://www.baidu.com/s?wd=%s")
+                                       (baidu-family
+                                        :name "baidu-family"
+                                        :url "http://neisou.baidu.com/web/search?word=%s&tn=family_redirect&ds=family")))
     (dolist (engine custom-search-engine-alist)
       (let ((func (intern (format "engine/search-%S" (car engine)))))
         (autoload func "engine-mode" nil 'interactive)))
