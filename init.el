@@ -51,7 +51,8 @@ values."
      (org :variables
           org-enable-org-journal-support t)
      gtags
-     go
+     (go :variables
+         gofmt-command "goimports")
      syntax-checking
 
      ca-better-defaults

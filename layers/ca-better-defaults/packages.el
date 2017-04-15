@@ -10,10 +10,12 @@
 ;;; License: GPLv3
 
 (defconst ca-better-defaults-packages
-  '(chinese-fonts-setup
+  '(
+    chinese-fonts-setup
     google-translate
     engine-mode
-    yasnippet)
+    yasnippet
+    )
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
 (defun ca-better-defaults/init-chinese-fonts-setup ()
