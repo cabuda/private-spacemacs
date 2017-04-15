@@ -12,7 +12,8 @@
 (defconst ca-better-defaults-packages
   '(chinese-fonts-setup
     google-translate
-    engine-mode)
+    engine-mode
+    yasnippet)
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
 (defun ca-better-defaults/init-chinese-fonts-setup ()
@@ -49,3 +50,7 @@
         (eval `(defengine ,cur-engine ,engine-url))))
     (setq search-engine-alist (append search-engine-alist custom-search-engine-alist))
     ))
+
+(defun ca-better-defaults/pre-init-yasnippet ()
+  (progn
+    (setq auto-completion-private-snippets-directory (expand-file-name "snippets" dotspacemacs-directory))))
