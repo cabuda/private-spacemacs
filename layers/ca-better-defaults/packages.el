@@ -15,6 +15,7 @@
     google-translate
     engine-mode
     yasnippet
+    web-mode
     )
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
@@ -56,3 +57,16 @@
 (defun ca-better-defaults/pre-init-yasnippet ()
   (progn
     (setq auto-completion-private-snippets-directory (expand-file-name "snippets" dotspacemacs-directory))))
+
+(defun ca-better-defaults/post-init-web-mode ()
+  (progn
+    (setq-default
+     ;; js2-mode
+     js2-basic-offset 2
+     ;; web-mode
+     css-indent-offset 2
+     web-mode-markup-indent-offset 2
+     web-mode-css-indent-offset 2
+     web-mode-code-indent-offset 2
+     web-mode-attr-indent-offset 2)
+    ))

@@ -57,6 +57,7 @@ values."
      syntax-checking
      (restclient :variables
                  restclient-use-org t)
+     react
 
      ca-better-defaults
      ca-org
