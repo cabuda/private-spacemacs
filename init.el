@@ -42,22 +42,17 @@ values."
      emacs-lisp
      git
      deft
-     html
-     javascript
      search-engine
-     php
      osx
      shell
      (org :variables
           org-projectile-file "README.org"
           org-enable-org-journal-support t)
-     gtags
      (go :variables
          gofmt-command "goimports")
      syntax-checking
      (restclient :variables
                  restclient-use-org t)
-     react
 
      ca-better-defaults
      ca-org
