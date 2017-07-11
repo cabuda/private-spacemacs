@@ -16,6 +16,8 @@
     engine-mode
     yasnippet
     web-mode
+    youdao-dictionary
+    fcitx
     )
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
@@ -69,4 +71,13 @@
      web-mode-css-indent-offset 2
      web-mode-code-indent-offset 2
      web-mode-attr-indent-offset 2)
+    ))
+
+(defun ca-better-defaults/post-init-youdao-dictionary ()
+  (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
+  )
+
+(defun ca-better-defaults/pre-init-fcitx ()
+  (progn
+    (setq fcitx-active-evil-states '(insert emacs hybrid))
     ))
