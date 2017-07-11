@@ -18,6 +18,7 @@
     web-mode
     youdao-dictionary
     fcitx
+    json-mode
     )
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
@@ -81,3 +82,11 @@
   (progn
     (setq fcitx-active-evil-states '(insert emacs hybrid))
     ))
+
+(defun ca-better-defaults/init-json-mode ()
+  (use-package json-mode
+    :defer t
+    :init
+    (progn
+      (spacemacs/set-leader-keys-for-major-mode 'json-mode
+        "f" 'json-mode-beautify))))
