@@ -19,6 +19,7 @@
     youdao-dictionary
     fcitx
     json-mode
+    go-dlv
     )
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
@@ -90,3 +91,7 @@
     (progn
       (spacemacs/set-leader-keys-for-major-mode 'json-mode
         "f" 'json-mode-beautify))))
+
+(defun ca-better-defaults/init-go-dlv ()
+  (use-package go-dlv
+    :defer t))
