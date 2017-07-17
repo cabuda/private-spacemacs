@@ -19,6 +19,7 @@
     fcitx
     json-mode
     go-dlv
+    magit
     )
   "The list of Lisp packages required by the ca-better-defaults layer.")
 
@@ -90,3 +91,10 @@
 (defun ca-better-defaults/init-go-dlv ()
   (use-package go-dlv
     :defer t))
+
+(defun ca-better-defaults/post-init-magit ()
+  (progn
+    (magit-define-popup-action 'magit-push-popup
+      ?m
+      "Push for code review"
+      'magit-push-to-gerrit)))
