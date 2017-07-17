@@ -37,7 +37,8 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-private-snippets-directory (expand-file-name "snippets" dotspacemacs-directory))
      better-defaults
      emacs-lisp
      git

@@ -14,7 +14,6 @@
     chinese-fonts-setup
     google-translate
     engine-mode
-    yasnippet
     web-mode
     youdao-dictionary
     fcitx
@@ -57,10 +56,6 @@
         (eval `(defengine ,cur-engine ,engine-url))))
     (setq search-engine-alist (append search-engine-alist custom-search-engine-alist))
     ))
-
-(defun ca-better-defaults/pre-init-yasnippet ()
-  (progn
-    (setq auto-completion-private-snippets-directory (expand-file-name "snippets" dotspacemacs-directory))))
 
 (defun ca-better-defaults/post-init-web-mode ()
   (progn
