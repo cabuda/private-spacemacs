@@ -94,7 +94,8 @@
 
 (defun ca-better-defaults/post-init-magit ()
   (progn
-    (magit-define-popup-action 'magit-push-popup
-      ?m
-      "Push for code review"
-      'magit-push-to-gerrit)))
+    (with-eval-after-load 'magit
+      (magit-define-popup-action 'magit-push-popup
+        ?m
+        "Push for code review"
+        'magit-push-to-gerrit))))
