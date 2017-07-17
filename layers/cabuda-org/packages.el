@@ -20,10 +20,10 @@
   (progn
     (spacemacs/set-leader-keys-for-major-mode 'deft-mode "q" 'quit-window)
     (setq deft-default-extension "org")
-    (setq deft-directory (expand-file-name "deft-notes" dotspacemacs-directory))
+    (setq deft-directory deft-dir)
     ))
 
 (defun cabuda-org/post-init-org-journal ()
   (progn
-    (setq org-journal-dir (expand-file-name "journal-notes" dotspacemacs-directory))
+    (setq org-journal-dir journal-dir)
     ))
