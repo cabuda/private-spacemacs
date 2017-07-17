@@ -58,8 +58,7 @@ values."
               chinese-enable-fcitx t
               chinese-enable-youdao-dict t)
 
-     ca-better-defaults
-     ca-org
+     cabuda
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

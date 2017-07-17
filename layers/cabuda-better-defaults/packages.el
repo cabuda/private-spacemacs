@@ -1,4 +1,4 @@
-;;; packages.el --- ca-better-defaults layer packages file for Spacemacs.
+;;; packages.el --- cabuda-better-defaults layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
@@ -9,7 +9,7 @@
 ;;
 ;;; License: GPLv3
 
-(defconst ca-better-defaults-packages
+(defconst cabuda-better-defaults-packages
   '(
     chinese-fonts-setup
     google-translate
@@ -21,9 +21,9 @@
     go-dlv
     magit
     )
-  "The list of Lisp packages required by the ca-better-defaults layer.")
+  "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
-(defun ca-better-defaults/init-chinese-fonts-setup ()
+(defun cabuda-better-defaults/init-chinese-fonts-setup ()
   (use-package chinese-fonts-setup
     :config
     (chinese-fonts-setup-enable)
@@ -33,11 +33,11 @@
             (setq cfs--profiles-steps '(("profile1" . 2))))
     ))
 
-(defun ca-better-defaults/post-init-google-translate ()
+(defun cabuda-better-defaults/post-init-google-translate ()
   (progn
     (setq google-translate-default-target-language "zh-CN")))
 
-(defun ca-better-defaults/pre-init-engine-mode ()
+(defun cabuda-better-defaults/pre-init-engine-mode ()
   (progn
     (setq custom-search-engine-alist '((baidu
                                         :name "baidu"
@@ -49,7 +49,7 @@
       (let ((func (intern (format "engine/search-%S" (car engine)))))
         (autoload func "engine-mode" nil 'interactive)))
     ))
-(defun ca-better-defaults/post-init-engine-mode ()
+(defun cabuda-better-defaults/post-init-engine-mode ()
   (progn
     (dolist (engine custom-search-engine-alist)
       (let* ((cur-engine (car engine))
@@ -58,7 +58,7 @@
     (setq search-engine-alist (append search-engine-alist custom-search-engine-alist))
     ))
 
-(defun ca-better-defaults/post-init-web-mode ()
+(defun cabuda-better-defaults/post-init-web-mode ()
   (progn
     (setq-default
      ;; js2-mode
@@ -71,16 +71,16 @@
      web-mode-attr-indent-offset 2)
     ))
 
-(defun ca-better-defaults/post-init-youdao-dictionary ()
+(defun cabuda-better-defaults/post-init-youdao-dictionary ()
   (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
   )
 
-(defun ca-better-defaults/pre-init-fcitx ()
+(defun cabuda-better-defaults/pre-init-fcitx ()
   (progn
     (setq fcitx-active-evil-states '(insert emacs hybrid))
     ))
 
-(defun ca-better-defaults/init-json-mode ()
+(defun cabuda-better-defaults/init-json-mode ()
   (use-package json-mode
     :defer t
     :init
@@ -88,11 +88,11 @@
       (spacemacs/set-leader-keys-for-major-mode 'json-mode
         "f" 'json-mode-beautify))))
 
-(defun ca-better-defaults/init-go-dlv ()
+(defun cabuda-better-defaults/init-go-dlv ()
   (use-package go-dlv
     :defer t))
 
-(defun ca-better-defaults/post-init-magit ()
+(defun cabuda-better-defaults/post-init-magit ()
   (progn
     (with-eval-after-load 'magit
       (magit-define-popup-action 'magit-push-popup
