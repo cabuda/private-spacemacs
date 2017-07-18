@@ -16,8 +16,6 @@
 (defun phpplus/init-company-php ()
   (use-package company-php
     :defer t
-    :bind (:map php-mode-map
-           ("C-]" . ac-php-find-symbol-at-point))
     :init
     (progn
       (add-hook 'php-mode-hook  'ac-php-core-eldoc-setup)
