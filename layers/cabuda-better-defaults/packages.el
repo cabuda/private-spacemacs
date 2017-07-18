@@ -20,6 +20,7 @@
     json-mode
     go-dlv
     magit
+    go-mode
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
@@ -91,6 +92,13 @@
 (defun cabuda-better-defaults/init-go-dlv ()
   (use-package go-dlv
     :defer t))
+
+(defun cabuda-better-defaults/post-init-go-mode ()
+  (progn
+    (with-eval-after-load 'go-mode
+      (bind-key "C-]" 'godef-jump go-mode-map)
+      )))
+
 
 (defun cabuda-better-defaults/post-init-magit ()
   (progn
