@@ -58,6 +58,7 @@ values."
               chinese-enable-fcitx t
               chinese-enable-youdao-dict t)
      csv
+     ranger
 
      cabuda
      phpplus
