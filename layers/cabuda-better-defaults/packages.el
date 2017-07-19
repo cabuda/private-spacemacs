@@ -20,6 +20,7 @@
     json-mode
     go-dlv
     magit
+    yasnippet
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
@@ -99,3 +100,10 @@
         ?m
         "Push for code review"
         'magit-push-to-gerrit))))
+
+(defun cabuda-better-defaults/post-init-yasnippet ()
+  (progn
+    (spacemacs/declare-prefix "os" "snippet")
+    (spacemacs/set-leader-keys
+      "osc" 'yas-new-snippet
+      "ose" 'yas/visit-snippet-file)))
