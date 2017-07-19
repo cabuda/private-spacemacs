@@ -23,5 +23,5 @@
         :modes php-mode
         :variables
         company-minimum-prefix-length 0
-        :backends (company-ac-php-backend company-dabbrev))
+        :backends company-ac-php-backend)
       )))
