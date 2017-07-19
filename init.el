@@ -57,6 +57,7 @@ values."
      (chinese :variables
               chinese-enable-fcitx t
               chinese-enable-youdao-dict t)
+     csv
 
      cabuda
      phpplus
