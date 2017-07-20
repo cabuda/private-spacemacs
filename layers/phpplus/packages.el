@@ -22,6 +22,6 @@
       (spacemacs|add-company-backends
         :modes php-mode
         :variables
-        company-minimum-prefix-length 0
-        :backends company-ac-php-backend)
+        company-minimum-prefix-length 1000
+        :backends (company-ac-php-backend company-dabbrev-code))
       )))
