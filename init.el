@@ -324,6 +324,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
           ("org-cn"   . "http://elpa.emacs-china.org/org/")
           ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")
           ("marmalade" . "http://elpa.emacs-china.org/marmalade/")))
+  (setq enable-local-variables :all)
+  (setq enable-local-eval t)
   )
 
 (defun dotspacemacs/user-config ()
