@@ -59,6 +59,7 @@ values."
               chinese-enable-youdao-dict t)
      csv
      ranger
+     pandoc
 
      cabuda
      phpplus

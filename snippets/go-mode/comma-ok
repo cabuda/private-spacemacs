@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: comma-ok
+# key: ok
+# --
+if !ok {
+   $0
+}
