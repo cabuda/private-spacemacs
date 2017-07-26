@@ -60,6 +60,9 @@ values."
      csv
      ranger
      pandoc
+     (markdown :variables
+               markdown-live-preview-engine 'vmd
+               )
 
      cabuda
      phpplus
