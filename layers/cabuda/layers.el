@@ -13,4 +13,5 @@
                                       cabuda-org
                                       cabuda-better-defaults
                                       cabuda-programming
+                                      cabuda-misc
                                       ))
