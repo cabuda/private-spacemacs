@@ -14,11 +14,8 @@
     chinese-fonts-setup
     google-translate
     engine-mode
-    web-mode
     youdao-dictionary
     fcitx
-    json-mode
-    go-dlv
     magit
     yasnippet
     )
@@ -59,18 +56,6 @@
     (setq search-engine-alist (append search-engine-alist custom-search-engine-alist))
     ))
 
-(defun cabuda-better-defaults/post-init-web-mode ()
-  (progn
-    (setq-default
-     ;; js2-mode
-     js2-basic-offset 2
-     ;; web-mode
-     css-indent-offset 2
-     web-mode-markup-indent-offset 2
-     web-mode-css-indent-offset 2
-     web-mode-code-indent-offset 2
-     web-mode-attr-indent-offset 2)
-    ))
 
 (defun cabuda-better-defaults/post-init-youdao-dictionary ()
   (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
@@ -81,17 +66,8 @@
     (setq fcitx-active-evil-states '(insert emacs hybrid))
     ))
 
-(defun cabuda-better-defaults/init-json-mode ()
-  (use-package json-mode
-    :defer t
-    :init
-    (progn
-      (spacemacs/set-leader-keys-for-major-mode 'json-mode
-        "f" 'json-mode-beautify))))
 
-(defun cabuda-better-defaults/init-go-dlv ()
-  (use-package go-dlv
-    :defer t))
+
 
 (defun cabuda-better-defaults/post-init-magit ()
   (progn

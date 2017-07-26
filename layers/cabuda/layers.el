@@ -12,4 +12,5 @@
 (configuration-layer/declare-layers '(
                                       cabuda-org
                                       cabuda-better-defaults
+                                      cabuda-programming
                                       ))
