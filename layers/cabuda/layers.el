@@ -14,4 +14,5 @@
                                       cabuda-better-defaults
                                       cabuda-programming
                                       cabuda-misc
+                                      cabuda-ui
                                       ))

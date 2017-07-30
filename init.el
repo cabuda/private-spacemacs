@@ -330,6 +330,12 @@ before packages are loaded. If you are unsure, you should try in setting them in
           ("marmalade" . "http://elpa.emacs-china.org/marmalade/")))
   (setq enable-local-variables :all)
   (setq enable-local-eval t)
+  (setq cabuda-themes '(
+                        monokai-theme
+                        dracula-theme
+                        django-theme
+                        zenburn-theme
+                        ))
   )
 
 (defun dotspacemacs/user-config ()
