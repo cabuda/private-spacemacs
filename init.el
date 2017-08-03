@@ -63,9 +63,15 @@ values."
      (markdown :variables
                markdown-live-preview-engine 'vmd
                )
+     (php :packages (not
+                     drupal-mode
+                     php-extras
+                     phpcbf
+                     phpunit
+                     )
+          )
 
      cabuda
-     phpplus
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -75,7 +81,9 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(ggtags
+                                    helm-gtags
+                                    )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
