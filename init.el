@@ -63,13 +63,7 @@ values."
      (markdown :variables
                markdown-live-preview-engine 'vmd
                )
-     (php :packages (not
-                     drupal-mode
-                     php-extras
-                     phpcbf
-                     phpunit
-                     )
-          )
+     php
 
      cabuda
      )
@@ -81,8 +75,10 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(ggtags
-                                    helm-gtags
+   dotspacemacs-excluded-packages '(ggtags helm-gtags
+                                    google-translate
+                                    helm-c-yasnippet
+                                    drupal-mode php-extras phpcbf phpunit
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
