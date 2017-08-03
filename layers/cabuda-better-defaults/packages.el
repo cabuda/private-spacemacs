@@ -18,9 +18,9 @@
 (defun cabuda-better-defaults/init-chinese-fonts-setup ()
   (use-package chinese-fonts-setup
     :config
-    (chinese-fonts-setup-enable)
-    (setq cfs--current-profile "profile1")
+    (cnfonts-enable)
+    (setq cnfonts--current-profile "profile1")
     (if (eq system-type 'darwin)
-            (setq cfs--profiles-steps '(("profile1" . 5)))
-            (setq cfs--profiles-steps '(("profile1" . 2))))
+            (setq cnfonts--profiles-steps '(("profile1" . 5)))
+            (setq cnfonts--profiles-steps '(("profile1" . 2))))
     ))
