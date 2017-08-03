@@ -33,6 +33,7 @@
   '(
     web-mode
     go-dlv
+    company-php
     )
   "The list of Lisp packages required by the cabuda-programming layer.")
 
@@ -55,3 +56,12 @@
 (defun cabuda-programming/init-go-dlv ()
   (use-package go-dlv
     :defer t))
+
+(defun cabuda-programming/post-init-company-php ()
+  (spacemacs|add-company-backends
+    :modes php-mode
+    :variables
+    company-minimum-prefix-length 5
+    company-dabbrev-code-other-buffers t
+    company-dabbrev-minimum-length 5
+    :backends (company-ac-php-backend company-dabbrev-code)))
