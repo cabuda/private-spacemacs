@@ -32,7 +32,6 @@
 (defconst cabuda-programming-packages
   '(
     web-mode
-    json-mode
     go-dlv
     )
   "The list of Lisp packages required by the cabuda-programming layer.")
@@ -52,14 +51,6 @@
      web-mode-code-indent-offset 2
      web-mode-attr-indent-offset 2)
     ))
-
-(defun cabuda-programming/init-json-mode ()
-  (use-package json-mode
-    :defer t
-    :init
-    (progn
-      (spacemacs/set-leader-keys-for-major-mode 'json-mode
-        "f" 'json-mode-beautify))))
 
 (defun cabuda-programming/init-go-dlv ()
   (use-package go-dlv

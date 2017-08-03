@@ -64,6 +64,9 @@ values."
                markdown-live-preview-engine 'vmd
                )
      php
+     html
+     javascript
+     typescript
 
      cabuda
      )
@@ -79,6 +82,8 @@ values."
                                     google-translate
                                     helm-c-yasnippet
                                     drupal-mode php-extras phpcbf phpunit
+                                    slim-mode pug-mode haml-mode less-css-mode sass-mode scss-mode
+                                    coffee-mode
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
