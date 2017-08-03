@@ -12,6 +12,7 @@
 (defconst cabuda-better-defaults-packages
   '(
     chinese-fonts-setup
+    helm-swoop
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
@@ -24,3 +25,8 @@
             (setq cnfonts--profiles-steps '(("profile1" . 5)))
             (setq cnfonts--profiles-steps '(("profile1" . 2))))
     ))
+
+(defun cabuda-better-defaults/post-init-helm-swoop ()
+  (progn
+    (bind-key "C-s" 'helm-swoop)
+    (bind-key "C-S-s" 'spacemacs/helm-swoop-region-or-symbol)))
