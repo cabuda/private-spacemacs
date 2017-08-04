@@ -343,8 +343,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq cabuda-themes '(
                         monokai-theme
                         dracula-theme
-                        django-theme
-                        zenburn-theme
                         ))
   )
 
