@@ -1,7 +1,3 @@
-(defun magit-push-to-gerrit ()
-  (interactive)
-  (magit-git-command (concat "push origin HEAD:refs/for/" (magit-get-current-branch)) (magit-toplevel)))
-
 (defun cabuda|rsync-to-dev_pc()
   "Sync code to dev_pc"
   (interactive)
