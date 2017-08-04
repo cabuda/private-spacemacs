@@ -13,6 +13,7 @@
   '(
     chinese-fonts-setup
     helm-swoop
+    (recentf :location built-in)
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
@@ -30,3 +31,27 @@
   (progn
     (bind-key "C-s" 'helm-swoop)
     (bind-key "C-S-s" 'spacemacs/helm-swoop-region-or-symbol)))
+
+(defun cabuda-better-defaults/post-init-recentf ()
+  (progn
+    (setq recentf-exclude
+          '("COMMIT_MSG"
+            "COMMIT_EDITMSG"
+            "github.*txt$"
+            "/tmp/"
+            "/ssh:"
+            "/sudo:"
+            "/TAGS$"
+            "/GTAGS$"
+            "/GRAGS$"
+            "/GPATH$"
+            "\\.mkv$"
+            "\\.mp[34]$"
+            "\\.avi$"
+            "\\.pdf$"
+            "\\.sub$"
+            "\\.srt$"
+            "\\.ass$"
+            ".*png$"
+            ))
+    (setq recentf-max-saved-items 2048)))
