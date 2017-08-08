@@ -34,6 +34,7 @@
     web-mode
     go-dlv
     company-php
+    ng2-mode
     )
   "The list of Lisp packages required by the cabuda-programming layer.")
 
@@ -65,3 +66,8 @@
     company-dabbrev-code-other-buffers t
     company-dabbrev-minimum-length 5
     :backends (company-ac-php-backend company-dabbrev-code)))
+
+(defun cabuda-programming/init-ng2-mode ()
+  (use-package ng2-mode
+    :defer t
+    ))
