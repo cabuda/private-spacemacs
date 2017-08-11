@@ -4,7 +4,7 @@
   (start-process-shell-command
    "rsync_from_dev"
    (get-buffer-create "*rsync-buffer*")
-   "rsync -avzP --delete --inplace --password-file=/Users/duxinlong/.config/rsync/rsyncd.secrets  /Users/duxinlong/codes/ rsync://duxinlong@cp01-rdqa-dev083-duxinlong.epc:8050/codes/")
+   "rsync -avzP --delete --inplace --password-file=/Users/duxinlong/.config/rsync/rsyncd.secrets --exclude='.git/' /Users/duxinlong/codes/ rsync://duxinlong@cp01-rdqa-dev083-duxinlong.epc:8050/codes/")
   (message "已同步到开发机"))
 
 (defun cabuda|rsync-from-dev_pc()
@@ -13,5 +13,5 @@
   (start-process-shell-command
    "rsync_from_dev"
    (get-buffer-create "*rsync-buffer*")
-   "rsync -avzP --delete --inplace --password-file=/Users/duxinlong/.config/rsync/rsyncd.secrets rsync://duxinlong@cp01-rdqa-dev083-duxinlong.epc:8050/codes/ /Users/duxinlong/codes/")
+   "rsync -avzP --delete --inplace --password-file=/Users/duxinlong/.config/rsync/rsyncd.secrets --exclude='.git/' rsync://duxinlong@cp01-rdqa-dev083-duxinlong.epc:8050/codes/ /Users/duxinlong/codes/")
   (message "已同步到本地"))
