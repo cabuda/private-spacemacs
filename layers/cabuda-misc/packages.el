@@ -37,6 +37,7 @@
     fcitx
     magit
     yasnippet
+    popup-kill-ring
     )
   "The list of Lisp packages required by the cabuda-misc layer.")
 
@@ -87,3 +88,10 @@
     (spacemacs/set-leader-keys
       "osc" 'yas-new-snippet
       "ose" 'yas/visit-snippet-file)))
+
+(defun cabuda-misc/init-popup-kill-ring ()
+  (use-package popup-kill-ring
+    :ensure t
+    :bind (:map global-map
+           ("M-y" . popup-kill-ring))
+     ))
