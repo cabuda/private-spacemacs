@@ -91,7 +91,6 @@
 
 (defun cabuda-misc/init-popup-kill-ring ()
   (use-package popup-kill-ring
-    :ensure t
     :bind (:map global-map
            ("M-y" . popup-kill-ring))
      ))

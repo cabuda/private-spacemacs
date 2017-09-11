@@ -68,6 +68,9 @@ values."
      html
      javascript
      typescript
+     docker
+     yaml
+     python
 
      cabuda
      )
@@ -79,16 +82,16 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(ggtags helm-gtags
-                                    google-translate
+   dotspacemacs-excluded-packages '(google-translate
                                     helm-c-yasnippet
                                     drupal-mode php-extras phpcbf phpunit
                                     slim-mode pug-mode haml-mode less-css-mode sass-mode scss-mode
                                     coffee-mode
+                                    ggtags helm-gtags
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
-   ;; `used-only' installs only explicitly used packages and uninstall any
+    ;; `used-only' installs only explicitly used packages and uninstall any
    ;; unused packages as well as their unused dependencies.
    ;; `used-but-keep-unused' installs only the used packages but won't uninstall
    ;; them if they become unused. `all' installs *all* packages supported by
@@ -153,7 +156,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(spacemacs-dark
+                         monokai
                          )
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -345,6 +349,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                         monokai-theme
                         dracula-theme
                         ))
+
   )
 
 (defun dotspacemacs/user-config ()
