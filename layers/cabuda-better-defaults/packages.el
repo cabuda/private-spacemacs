@@ -11,14 +11,14 @@
 
 (defconst cabuda-better-defaults-packages
   '(
-    chinese-fonts-setup
+    cnfonts
     helm-swoop
     (recentf :location built-in)
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
-(defun cabuda-better-defaults/init-chinese-fonts-setup ()
-  (use-package chinese-fonts-setup
+(defun cabuda-better-defaults/init-cnfonts ()
+  (use-package cnfonts
     :config
     (cnfonts-enable)
     (setq cnfonts--current-profile "profile1")
