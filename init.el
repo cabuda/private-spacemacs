@@ -71,6 +71,7 @@ values."
      docker
      yaml
      python
+     sql
 
      cabuda
      )
