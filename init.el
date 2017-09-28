@@ -51,6 +51,7 @@ values."
           org-projectile-file "README.org"
           org-enable-org-journal-support t)
      (go :variables
+         go-tab-width 4
          gofmt-command "goimports")
      syntax-checking
      (restclient :variables
