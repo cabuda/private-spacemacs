@@ -73,6 +73,10 @@ values."
      yaml
      python
      sql
+     (treemacs :variables
+               treemacs-use-follow-mode t
+               treemacs-use-filewatch-mode t
+               treemacs-use-collapsed-directories 3)
 
      cabuda
      )
