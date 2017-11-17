@@ -35,6 +35,7 @@
     go-dlv
     company-php
     ng2-mode
+    toml-mode
     )
   "The list of Lisp packages required by the cabuda-programming layer.")
 
@@ -69,5 +70,10 @@
 
 (defun cabuda-programming/init-ng2-mode ()
   (use-package ng2-mode
+    :defer t
+    ))
+
+(defun cabuda-programming/init-toml-mode ()
+  (use-package toml-mode
     :defer t
     ))
