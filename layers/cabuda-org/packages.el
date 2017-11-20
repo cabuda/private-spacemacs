@@ -13,6 +13,7 @@
   '(
     deft
     org-journal
+    easy-hugo
     )
   "The list of Lisp packages required by the cabuda-org layer.")
 
@@ -27,3 +28,17 @@
   (progn
     (setq org-journal-dir journal-dir)
     ))
+
+(defun cabuda-org/init-easy-hugo ()
+  (use-package easy-hugo
+    :defer t
+    :init
+    (progn
+      (spacemacs/set-leader-keys "ah" 'easy-hugo))
+    :config
+    (progn
+      (setq easy-hugo-basedir easy-hugo-dir
+            easy-hugo-url easy-hugo-url
+            easy-hugo-postdir "content/posts")
+      (evil-set-initial-state 'easy-hugo-mode 'emacs)
+      )))

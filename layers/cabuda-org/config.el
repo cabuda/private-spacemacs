@@ -8,4 +8,6 @@
 
 (setq-default
  deft-dir (expand-file-name "deft-notes" dotspacemacs-directory)
- journal-dir (expand-file-name "journal-notes" dotspacemacs-directory))
+ journal-dir (expand-file-name "journal-notes" dotspacemacs-directory)
+ easy-hugo-dir (expand-file-name "Nutstore/blog/" user-home-directory)
+ easy-hugo-url "https://cabuda.github.io")
