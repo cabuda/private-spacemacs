@@ -162,9 +162,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(
-                         doom-molokai
-                         )
+   dotspacemacs-themes '(spacemacs-dark
+                         spacemacs-light)
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -352,7 +351,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq enable-local-variables :all)
   (setq enable-local-eval t)
   (setq cabuda-themes '(
-                        doom-themes
                         ))
 
   (setq exec-path-from-shell-check-startup-files nil)
