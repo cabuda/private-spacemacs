@@ -1,4 +1,4 @@
-(setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
+;; (setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
 
 (defvar deft-dir ""
   "deft org files location")
