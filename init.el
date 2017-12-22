@@ -351,6 +351,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq enable-local-variables :all)
   (setq enable-local-eval t)
   (setq cabuda-themes '(
+                        apropospriate-theme
                         ))
 
   (setq exec-path-from-shell-check-startup-files nil)
