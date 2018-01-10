@@ -94,6 +94,7 @@ values."
                                     slim-mode pug-mode haml-mode less-css-mode sass-mode scss-mode
                                     coffee-mode
                                     ggtags helm-gtags
+                                    nameless
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.

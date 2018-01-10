@@ -14,6 +14,7 @@
     cnfonts
     helm-swoop
     (recentf :location built-in)
+    winum
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
@@ -55,3 +56,6 @@
             ".*png$"
             ))
     (setq recentf-max-saved-items 2048)))
+
+(defun cabuda-better-defaults/post-init-winum ()
+  (setq winum-scope 'frame-local))
