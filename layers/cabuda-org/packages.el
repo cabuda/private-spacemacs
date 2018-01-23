@@ -39,6 +39,6 @@
     (progn
       (setq easy-hugo-basedir easy-hugo-dir
             easy-hugo-url easy-hugo-url
-            easy-hugo-postdir "content/posts")
+            easy-hugo-postdir "content/post")
       (evil-set-initial-state 'easy-hugo-mode 'emacs)
       )))
