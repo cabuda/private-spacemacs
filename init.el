@@ -78,6 +78,7 @@ values."
                treemacs-use-filewatch-mode t
                treemacs-use-collapsed-directories 3)
      (plantuml :variables
+               org-plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory)
                plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory))
 
      cabuda
