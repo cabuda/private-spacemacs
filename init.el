@@ -73,10 +73,6 @@ values."
      yaml
      python
      sql
-     (treemacs :variables
-               treemacs-use-follow-mode t
-               treemacs-use-filewatch-mode t
-               treemacs-use-collapsed-directories 3)
      (plantuml :variables
                org-plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory)
                plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory))
@@ -98,6 +94,7 @@ values."
                                     coffee-mode
                                     ggtags helm-gtags
                                     nameless
+                                    neotree
                                     )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -167,8 +164,6 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         solarized-dark
-                         solarized-light
                          spacemacs-dark
                          spacemacs-light)
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
@@ -176,7 +171,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Monaco"
-                               :size 13
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)

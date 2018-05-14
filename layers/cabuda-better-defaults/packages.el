@@ -11,27 +11,9 @@
 
 (defconst cabuda-better-defaults-packages
   '(
-    cnfonts
-    helm-swoop
     (recentf :location built-in)
-    winum
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
-
-(defun cabuda-better-defaults/init-cnfonts ()
-  (use-package cnfonts
-    :config
-    (cnfonts-enable)
-    (setq cnfonts--current-profile "profile1")
-    (if (eq system-type 'darwin)
-            (setq cnfonts--profiles-steps '(("profile1" . 5)))
-            (setq cnfonts--profiles-steps '(("profile1" . 2))))
-    ))
-
-(defun cabuda-better-defaults/post-init-helm-swoop ()
-  (progn
-    (bind-key "C-s" 'helm-swoop)
-    (bind-key "C-S-s" 'spacemacs/helm-swoop-region-or-symbol)))
 
 (defun cabuda-better-defaults/post-init-recentf ()
   (progn
@@ -56,6 +38,3 @@
             ".*png$"
             ))
     (setq recentf-max-saved-items 2048)))
-
-(defun cabuda-better-defaults/post-init-winum ()
-  (setq winum-scope 'frame-local))
