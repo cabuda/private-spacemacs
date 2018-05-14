@@ -11,9 +11,15 @@
 
 (defconst cabuda-better-defaults-packages
   '(
+    helm-swoop
     (recentf :location built-in)
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
+
+(defun cabuda-better-defaults/post-init-helm-swoop ()
+  (progn
+    (bind-key "C-s" 'helm-swoop)
+    (bind-key "C-S-s" 'spacemacs/helm-swoop-region-or-symbol)))
 
 (defun cabuda-better-defaults/post-init-recentf ()
   (progn

@@ -67,12 +67,12 @@ values."
                )
      php
      html
-     javascript
-     typescript
+     ;; javascript
+     ;; typescript
      docker
      yaml
-     python
-     sql
+     ;; python
+     ;; sql
      (plantuml :variables
                org-plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory)
                plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory))
