@@ -13,6 +13,7 @@
   '(
     helm-swoop
     (recentf :location built-in)
+    default-text-scale
     )
   "The list of Lisp packages required by the cabuda-better-defaults layer.")
 
@@ -44,3 +45,8 @@
             ".*png$"
             ))
     (setq recentf-max-saved-items 2048)))
+
+(defun cabuda-better-defaults/init-default-text-scale ()
+  (use-package default-text-scale
+    :bind (("C-M-=" . default-text-scale-increase)
+           ("C-M--" . default-text-scale-decrease))))
