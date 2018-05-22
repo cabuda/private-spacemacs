@@ -83,7 +83,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      cnfonts
+                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -369,6 +371,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (when (spacemacs/system-is-linux)
     (setq x-select-enable-clipboard t))
+
+  (cnfonts-enable)
+  (cnfonts-set-spacemacs-fallback-fonts)
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
