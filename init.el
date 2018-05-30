@@ -77,6 +77,11 @@ values."
                org-plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory)
                plantuml-jar-path (expand-file-name "plantuml.jar" dotspacemacs-directory))
 
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
+     (treemacs :variables
+               treemacs-use-collapsed-directories 3)
+
      cabuda
      )
    ;; List of additional packages that will be installed without being

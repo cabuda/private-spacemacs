@@ -19,7 +19,7 @@
 
 (defun cabuda-better-defaults/post-init-helm-swoop ()
   (progn
-    (bind-key "C-s" 'helm-swoop)
+    (bind-key "M-s /" 'helm-swoop)
     (bind-key "C-S-s" 'spacemacs/helm-swoop-region-or-symbol)))
 
 (defun cabuda-better-defaults/post-init-recentf ()
