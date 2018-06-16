@@ -66,7 +66,7 @@
     company-minimum-prefix-length 5
     company-dabbrev-code-other-buffers t
     company-dabbrev-minimum-length 5
-    :backends (company-ac-php-backend company-dabbrev-code)))
+    :backends (company-ac-php-backend company-gtags company-dabbrev-code)))
 
 (defun cabuda-programming/init-ng2-mode ()
   (use-package ng2-mode

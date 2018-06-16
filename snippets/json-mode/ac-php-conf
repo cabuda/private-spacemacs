@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: ac-php-conf
+# key: ac-php-conf
+# --
+
+{
+  "use-cscope": null,
+  "tag-dir": null,
+  "filter": {
+    "php-file-ext-list": [
+      "php"
+    ],
+    "php-path-list": [
+      "."
+    ],
+    "php-path-list-without-subdir": []
+  }
+}
