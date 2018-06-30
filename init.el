@@ -82,6 +82,7 @@ values."
      (treemacs :variables
                treemacs-use-collapsed-directories 3)
      (gtags :variables gtags-enable-by-default t)
+     nginx
 
      cabuda
      )
