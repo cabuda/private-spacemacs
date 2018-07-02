@@ -57,7 +57,6 @@ values."
      (restclient :variables
                  restclient-use-org t)
      (chinese :variables
-              chinese-enable-fcitx t
               chinese-enable-youdao-dict t)
      csv
      ranger
