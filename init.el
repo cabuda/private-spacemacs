@@ -66,8 +66,8 @@ values."
                )
      php
      html
-     ;; javascript
-     ;; typescript
+     javascript
+     typescript
      docker
      yaml
      ;; python
@@ -91,6 +91,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
                                       cnfonts
+                                      color-theme-sanityinc-tomorrow
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()

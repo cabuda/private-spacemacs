@@ -34,7 +34,6 @@
     web-mode
     go-dlv
     company-php
-    ng2-mode
     toml-mode
     )
   "The list of Lisp packages required by the cabuda-programming layer.")
@@ -67,11 +66,6 @@
     company-dabbrev-code-other-buffers t
     company-dabbrev-minimum-length 5
     :backends (company-ac-php-backend company-gtags company-dabbrev-code)))
-
-(defun cabuda-programming/init-ng2-mode ()
-  (use-package ng2-mode
-    :defer t
-    ))
 
 (defun cabuda-programming/init-toml-mode ()
   (use-package toml-mode
