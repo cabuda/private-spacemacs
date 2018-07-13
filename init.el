@@ -46,7 +46,7 @@ values."
      search-engine
      osx
      (shell :variables
-            shell-default-position 'right)
+            shell-default-position 'full)
      (org :variables
           org-projectile-file "README.org"
           org-enable-org-journal-support t)
@@ -165,6 +165,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         sanityinc-tomorrow-bright
                          spacemacs-dark
                          spacemacs-light)
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
