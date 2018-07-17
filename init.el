@@ -374,6 +374,10 @@ you should place your code here."
 
   (cnfonts-enable)
   (cnfonts-set-spacemacs-fallback-fonts)
+
+  (set-face-attribute 'region nil :background "#666" :foreground "#ffffff" :box '(:line-width -1 :style released-button))
+  (set-face-attribute 'highlight nil :background "#666" :foreground "#ffffff" :box '(:line-width -1 :style released-button))
+  (spacemacs/toggle-highlight-current-line-globally-off)
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
