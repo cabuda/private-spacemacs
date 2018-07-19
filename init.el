@@ -52,7 +52,9 @@ values."
           org-enable-org-journal-support t)
      (go :variables
          go-tab-width 4
-         gofmt-command "goimports")
+         gofmt-command "goimports"
+         godoc-at-point-function 'godoc-gogetdoc
+         )
      syntax-checking
      (restclient :variables
                  restclient-use-org t)
