@@ -56,13 +56,10 @@ values."
          godoc-at-point-function 'godoc-gogetdoc
          )
      syntax-checking
-     (restclient :variables
-                 restclient-use-org t)
      (chinese :variables
               chinese-enable-youdao-dict t)
      csv
      ranger
-     pandoc
      (markdown :variables
                markdown-live-preview-engine 'vmd
                )
@@ -80,8 +77,6 @@ values."
 
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
-     (treemacs :variables
-               treemacs-use-collapsed-directories 3)
      (gtags :variables gtags-enable-by-default t)
      nginx
 
@@ -98,7 +93,10 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(
+                                    phpunit
+                                    drupal-mode
+                                    )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
     ;; `used-only' installs only explicitly used packages and uninstall any
