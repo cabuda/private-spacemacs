@@ -65,9 +65,8 @@ values."
                )
      php
      html
-     javascript
-     typescript
-     docker
+     ;; javascript
+     ;; typescript
      yaml
      ;; python
      ;; sql
