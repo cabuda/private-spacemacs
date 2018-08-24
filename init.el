@@ -65,6 +65,7 @@ values."
                )
      php
      html
+     json
      ;; javascript
      ;; typescript
      yaml
