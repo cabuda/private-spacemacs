@@ -1,4 +1,5 @@
 deft-notes/*
 journal-notes/*
 custom.el
+.spacemacs.env
 spacemacs.env
