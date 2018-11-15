@@ -46,7 +46,7 @@ values."
      search-engine
      osx
      (shell :variables
-            shell-default-position 'full)
+            shell-default-position 'bottom)
      (org :variables
           org-projectile-file "README.org"
           org-enable-org-journal-support t)
