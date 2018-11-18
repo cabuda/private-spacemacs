@@ -21,12 +21,12 @@
   (progn
     (spacemacs/set-leader-keys-for-major-mode 'deft-mode "q" 'quit-window)
     (setq deft-default-extension "org")
-    (setq deft-directory deft-dir)
+    (setq deft-directory (expand-file-name "deft-notes" sync-document-dir))
     ))
 
 (defun cabuda-org/post-init-org-journal ()
   (progn
-    (setq org-journal-dir journal-dir)
+    (setq org-journal-dir (expand-file-name "journal-notes" sync-document-dir))
     ))
 
 (defun cabuda-org/init-easy-hugo ()
@@ -37,8 +37,8 @@
       (spacemacs/set-leader-keys "ah" 'easy-hugo))
     :config
     (progn
-      (setq easy-hugo-basedir easy-hugo-dir
-            easy-hugo-url easy-hugo-url
+      (setq easy-hugo-basedir (expand-file-name "blog/" sync-document-dir)
+            easy-hugo-url "https://cabuda.github.io"
             easy-hugo-postdir "content/post")
       (evil-set-initial-state 'easy-hugo-mode 'emacs)
       )))

@@ -1,13 +1,4 @@
 ;; (setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
 
-(defvar deft-dir ""
-  "deft org files location")
-
-(defvar journal-dir ""
-  "org journal files location")
-
-(setq-default
- deft-dir (expand-file-name "deft-notes" dotspacemacs-directory)
- journal-dir (expand-file-name "journal-notes" dotspacemacs-directory)
- easy-hugo-dir (expand-file-name "Nutstore/blog/" user-home-directory)
- easy-hugo-url "https://cabuda.github.io")
+(defvar sync-document-dir (expand-file-name ".sync_document" user-home-directory)
+  "sync files location")
